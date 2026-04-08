@@ -33,3 +33,4 @@ checkpoints/
 # OS
 .DS_Store
 Thumbs.db
+upload_to_hf.py
