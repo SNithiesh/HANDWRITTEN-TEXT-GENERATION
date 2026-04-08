@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "handwritten-rnn"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "datasets",
+    "hypothesis",
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: requires network or external resources",
+]
+
+[tool.hypothesis]
+max_examples = 100
