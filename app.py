@@ -2,9 +2,10 @@ import os
 import gradio as gr
 from handwritten_rnn.generator import Generator
 
-# Default paths — bundled in the repo under model/
-CHECKPOINT_PATH = os.environ.get("CHECKPOINT_PATH", "model/best.pt")
-VOCAB_PATH = os.environ.get("VOCAB_PATH", "model/vocab.json")
+# Use absolute paths relative to this file's location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CHECKPOINT_PATH = os.environ.get("CHECKPOINT_PATH", os.path.join(BASE_DIR, "model", "best.pt"))
+VOCAB_PATH = os.environ.get("VOCAB_PATH", os.path.join(BASE_DIR, "model", "vocab.json"))
 
 # Load model once at startup
 generator = None

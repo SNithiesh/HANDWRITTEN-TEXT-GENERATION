@@ -2,6 +2,15 @@
 
 A character-level Recurrent Neural Network (RNN) that learns patterns from handwritten text and generates new handwritten-like text sequences.
 
+## Live Demo
+
+Try it live on HuggingFace Spaces:
+**https://huggingface.co/spaces/nithieshs/handwritten-text-generation**
+
+## GitHub Repository
+
+**https://github.com/SNithiesh/HANDWRITTEN-TEXT-GENERATION**
+
 ## How it works
 
 The model trains on the [IAM Handwriting Dataset](https://huggingface.co/datasets/Teklia/IAM-line) — a benchmark dataset of handwritten English text from 657 writers. It learns character-by-character transition probabilities using an LSTM or GRU architecture, then generates new text by sampling from the learned distribution.
@@ -9,9 +18,10 @@ The model trains on the [IAM Handwriting Dataset](https://huggingface.co/dataset
 ## Example Output
 
 ```
-The government was a comparable well action was not to the temporary as were
-his opens to be of the press to Commonwealth , and all the first have not one
-in a memory of the most of the really be trading...
+The Health in Anglesey a more that the home. Allock of the come to the history
+of the temporary of brother-ing the political men in the controw must be had been
+being changes, in an eventary. A policy of the numerous change. And the conference,
+and the entroursed and we should be a young...
 ```
 
 ## Installation
@@ -75,6 +85,7 @@ handwritten_rnn/
 tests/
   test_smoke.py     # Unit and smoke tests
   test_integration.py  # End-to-end pipeline test
+app.py              # Gradio web demo
 pyproject.toml      # Dependencies and project config
 ```
 
@@ -83,6 +94,7 @@ pyproject.toml      # Dependencies and project config
 - Python >= 3.10
 - PyTorch
 - HuggingFace `datasets`
+- Gradio
 - `hypothesis` (property-based testing)
 - `pytest`
 
